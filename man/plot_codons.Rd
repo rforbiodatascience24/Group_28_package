@@ -7,7 +7,7 @@
 plot_codons(amino_acids)
 }
 \arguments{
-\item{amino_acids}{R vector of amino acids to plot}
+\item{amino_acids}{String of amino acids to plot}
 }
 \value{
 Returns a codon column plot object
