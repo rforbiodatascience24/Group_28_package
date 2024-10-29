@@ -1,6 +1,6 @@
 ---
 title: "centralperk"
-output: rmarkdown::github_document
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{centralperk}
   %\VignetteEngine{knitr::rmarkdown}
@@ -18,11 +18,17 @@ knitr::opts_chunk$set(
 library(centralperk)
 ```
 
+## Group28 GitHub repository:
+
+<https://github.com/rforbiodatascience24/Group_28_package>
+
 ## Description of this package
 
 The package centralperk contains five functions which represent the core processes of the central dogma in molecular biology. They can be used alone or in collaboration, in order to demonstrate different steps of the central dogma.
 
 ### Generate nucleotide sequence
+
+Generates a nucleotide sequence based on input defining the length. This resembles the DNA of an organism.
 
 ```{r}
 dna_sequence <- centralperk::sample_nucleotides(99)
@@ -32,6 +38,8 @@ dna_sequence
 
 ### DNA to RNA
 
+Converts the input DNA to RNA. This resembles the transcription of the DNA to mRNA in the organism.
+
 ```{r}
 rna_sequence <- centralperk::dna_to_rna(dna_sequence)
 
@@ -39,6 +47,8 @@ rna_sequence
 ```
 
 ### RNA sequence to codon list
+
+This function recognises the codons making up the RNA sequence. This resembles the tRNA recognises the mRNA in the ribosome.
 
 ```{r}
 codons <- centralperk::create_codons(rna_sequence,1)
@@ -48,6 +58,8 @@ codons
 
 ### Codons to amino acids
 
+This function looks up the codons in the 'codon_table' and the corresponding amino acid one-letter code gets appended, generating an amino acid sequence from the list of codons. This resembles the ribosome generating the peptide.
+
 ```{r}
 AA_sequence <- centralperk::translate(codons)
 
@@ -56,8 +68,12 @@ AA_sequence
 
 ### Plot of amino acids
 
+Plots the amino acid distributions of a string.
+
 ```{r}
 p1 <- centralperk::plot_codons(AA_sequence)
 
 p1
 ```
+
+## Discussion
