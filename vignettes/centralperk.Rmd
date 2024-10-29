@@ -1,0 +1,63 @@
+---
+title: "centralperk"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{centralperk}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(centralperk)
+```
+
+## Description of this package
+
+The package centralperk contains five functions which represent the core processes of the central dogma in molecular biology. They can be used alone or in collaboration, in order to demonstrate different steps of the central dogma.
+
+### Generate nucleotide sequence
+
+```{r}
+dna_sequence <- centralperk::sample_nucleotides(99)
+
+dna_sequence
+```
+
+### DNA to RNA
+
+```{r}
+rna_sequence <- centralperk::dna_to_rna(dna_sequence)
+
+rna_sequence
+```
+
+### RNA sequence to codon list
+
+```{r}
+codons <- centralperk::create_codons(rna_sequence,1)
+
+codons
+```
+
+### Codons to amino acids
+
+```{r}
+AA_sequence <- centralperk::translate(codons)
+
+AA_sequence
+```
+
+### Plot of amino acids
+
+```{r}
+p1 <- centralperk::plot_codons(AA_sequence)
+
+p1
+```
