@@ -1,6 +1,6 @@
 ---
 title: "centralperk"
-output: rmarkdown::pdf_document
+output: rmarkdown::github_document
 vignette: >
   %\VignetteIndexEntry{centralperk}
   %\VignetteEngine{knitr::rmarkdown}
