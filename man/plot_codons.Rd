@@ -13,5 +13,5 @@ plot_codons(amino_acids)
 Returns a codon column plot object
 }
 \description{
-Plot amino acid codons
+Plots the amino acid distributions of a string
 }
