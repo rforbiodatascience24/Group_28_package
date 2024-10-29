@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_codons.R
 \name{plot_codons}
 \alias{plot_codons}
-\title{Plot amino acid codons}
+\title{Plots the amino acid distributions of a string}
 \usage{
 plot_codons(amino_acids)
 }

@@ -77,3 +77,8 @@ p1
 ```
 
 ## Discussion
+
+The package can be useful for simulation of the central dogma. The different functions give the possibility of many different outputs. For example, if the DNA bases are known, and the protein sequence is wanted, or if the RNA bases are known and a plot of the number of each amino acids is wanted.
+The package includes 2 dependencies. The number of dependencies is limited to this, as using too many dependencies reduces the reproductability of the function.
+
+In addition to the functions included in the package, another function which could be included is a reverse transcription function, which could transcribe from RNA to DNA bases.
