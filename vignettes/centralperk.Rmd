@@ -18,6 +18,10 @@ knitr::opts_chunk$set(
 library(centralperk)
 ```
 
+## Group28 GitHub repository:
+
+<https://github.com/rforbiodatascience24/Group_28_package>
+
 ## Description of this package
 
 The package centralperk contains five functions which represent the core processes of the central dogma in molecular biology. They can be used alone or in collaboration, in order to demonstrate different steps of the central dogma.
