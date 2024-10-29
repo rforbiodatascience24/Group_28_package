@@ -1,6 +1,6 @@
-#' Plot amino acid codons
+#' Plots the amino acid distributions of a string
 #'
-#' @param amino_acids R vector of amino acids to plot
+#' @param amino_acids String of amino acids to plot
 #'
 #' @return Returns a codon column plot object
 #' @export
