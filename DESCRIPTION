@@ -1,0 +1,31 @@
+Package: centralperk
+Type: Package
+Title: Replicate the central dogma
+Version: 0.1.0
+Authors@R:
+  c(person(given = "Iben",
+           family = "Sommerand",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s203522@dtu.dk"), 
+    person(given = "Torbjørn",
+           family = "Regueira",
+           role = "aut",
+           email = "s203555@dtu.dk"),
+    person(given = "Vedis",
+           family = "Arntzen",
+           role = "aut",
+           email = "s203546@dtu.dk"),
+    person(given = "Emilie",
+           family = "Wenner",
+           role = "aut",
+           email = "s193602@dtu.dk"),
+    person(given = "Jonap",
+           family = "Sennek",
+           role = "aut",
+           email = "s203516@dtu.dk"))
+Maintainer: The package maintainer <s203522@dtu.dk>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
