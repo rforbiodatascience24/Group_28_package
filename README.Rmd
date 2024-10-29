@@ -1,55 +1,63 @@
 ---
-output: github_document
+title: "centralperk"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{centralperk}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  comment = "#>"
 )
 ```
 
-# centralperk
-
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
-
-The goal of centralperk is to ...
-
-## Installation
-
-You can install the development version of centralperk like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
+```{r setup}
 library(centralperk)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Description of this package
 
-```{r cars}
-summary(cars)
+The package centralperk contains five functions which represent the core processes of the central dogma in molecular biology. They can be used alone or in collaboration, in order to demonstrate different steps of the central dogma.
+
+### Generate nucleotide sequence
+
+```{r}
+dna_sequence <- centralperk::sample_nucleotides(99)
+
+dna_sequence
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+### DNA to RNA
 
-You can also embed plots, for example:
+```{r}
+rna_sequence <- centralperk::dna_to_rna(dna_sequence)
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+rna_sequence
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+### RNA sequence to codon list
+
+```{r}
+codons <- centralperk::create_codons(rna_sequence,1)
+
+codons
+```
+
+### Codons to amino acids
+
+```{r}
+AA_sequence <- centralperk::translate(codons)
+
+AA_sequence
+```
+
+### Plot of amino acids
+
+```{r}
+p1 <- centralperk::plot_codons(AA_sequence)
+
+p1
+```
